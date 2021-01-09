@@ -1,0 +1,103 @@
+<!doctype html>
+<html>
+    <head>
+        <link rel="stylesheet" href="stylesheets/reset.css" type="text/css" />
+        <link rel="stylesheet" href="stylesheets/Teacher.css" type="text/css" />
+        <link rel="stylesheet" href="stylesheets/bootstrap.min.css" type="text/css" />
+        <meta charset  = "utf-8">
+        <title>AmoebaPosition</title>
+    </head>
+    <body style = margin:0px>
+        <!-- 網頁上方的工具列或訊息 -->
+        <header>
+            <div class="navbar navbar-dark bg-dark shadow-sm">
+                <div class="container d-flex justify-content-between">
+                    <a href="#" class="navbar-brand d-flex align-items-center">
+                        <img src="/img/Amoeba.png" class="logo">
+                        <strong>Amoeba</strong>
+                    </a>
+                    <div>
+                        <select class = "menu">
+                            <option  disabled selected hidden style = "text-align: center;">首頁</option>
+                            <option style = "text-align: center;">CSC051</option>
+                            <option style = "text-align: center;">CSC021</option>
+                        </select>
+                    </div>
+                    <!-- <i class="fas fa-sign-out-alt" style="color:white"></i> -->
+                </div>
+                
+            </div>
+        </header>
+
+        <!--中間區塊-->
+        <div class = "centerRegion">
+            
+            <div class = "layout"> <!--分成兩半 左半為座位表 右半為問題-->
+                <!--座位表-->
+                <div class = "left">
+                    <div>
+                        <div class = "text">座位表<br></div>
+                        <table border='1'class="little" style="margin-top: 3em;">
+                            <tr style="visibility: hidden; margin: auto;">
+                                <th></th>
+                                <th></th>
+                                <th></th>
+                                <th></th>
+                                <th></th>
+                                <th></th>
+                                <th></th>
+                            </tr>
+                            
+                            <% for(let i=0; i<students.length; i++){ 
+                                let stu = students[i];
+                                // At the begging of tr
+                                if(i%7==0){ %>
+                                    <tr>
+                                <% } %>
+                                <% if(stu['Temp']>38){ %>
+                                    <td class="notice">
+                                <% }else{ %>
+                                    <td>
+                                <% } %>
+                                        <strong><%= stu['StuID']%></strong><br>
+                                        體溫<%= stu['Temp'] %>度<br>
+                                        <span style = "color: #707070;"><%= stu['Time']%></span>
+                                    </td>
+                                <% if(i%7==6||i==students.length-1){ //At the end of tr %>
+                                    </tr>
+                                <% } %>
+                            <% } %>
+                          </table>
+                    </div>
+                </div>
+
+                <div class = "right">
+                    <div class="container" style = "text-align: center;">
+                        <div class = "text" style="margin-bottom: 3em;">課程資訊</div>
+                        <ul style = "text-align: left; ">
+                            <li class="card bg-light text-dark" style = "margin: 2em auto ; padding:0.5em; width: 20em; display: flex;">
+                                    課程編號：<%=courseID%></li>
+                            <li class="card bg-light text-dark" style = "margin: 2em auto; padding:0.5em; width: 20em; display: flex;">
+                                    課程名稱：<%=courseName%></li>
+                            <li class="card bg-light text-dark" style = "margin: 2em auto; padding:0.5em; width: 20em; display: flex;">
+                                    授課教師：<%=courseTeacher%></li>
+                            <li class="card bg-light text-dark" style = "margin: 2em auto; padding:0.5em; width: 20em; display: flex;">
+                                    日期：<%=courseDate%></li>
+                            <li class="card bg-light text-dark" style = "margin: 2em auto; padding:0.5em; width: 20em; display: flex;">
+                                    教室：<%=courseClassroom%></li>
+                        </ul>
+
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+
+        <!-- 網頁下方的工具列或訊息 -->
+        <footer>
+            
+        </footer>
+
+    </body>
+</html>
