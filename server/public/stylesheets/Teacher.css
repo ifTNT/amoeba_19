@@ -1,0 +1,76 @@
+body {
+    background-color: #f3f3f3;
+    font-family: Microsoft JhengHei;
+    /*設定成微軟正黑體*/
+}
+
+.logo {
+    width: 40px;
+    margin-right: 10px;
+}
+
+.centerRegion {
+    padding: 2em 5em;
+    width: 100%;
+}
+
+.text {
+    font-size: 1.2em;
+    box-sizing: border-box;
+    padding: 0.5em 0em;
+    color: black;
+    vertical-align: -webkit-baseline-middle;
+}
+
+.little {
+    font-size: 0.9em;
+    box-sizing: border-box;
+    padding: 0.5em 0em;
+    color: black;
+    vertical-align: -webkit-baseline-middle;
+}
+
+
+.layout {
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    align-items: flex-start;
+}
+
+.left {
+    width: 60%;
+    margin: 1em;
+    /* background-color: white; */
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+.right {
+    width: 45%;
+    margin: 0 1em;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+}
+
+table tr td {
+    padding: 0.5em;
+    border-color: black;
+    border: 1px black solid;
+    font-size: 1 em;
+    line-height: 1.5em;
+}
+
+table tr th {
+    width: 5em;
+}
+
+.menu {
+    background-color: #044753;
+    color: white;
+}
+
+.notice {
+    background-color: tomato;
+}

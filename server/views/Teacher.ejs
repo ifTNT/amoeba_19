@@ -1,0 +1,98 @@
+<!doctype html>
+<html>
+    <head>
+        <link rel="stylesheet" href="/stylesheets/reset.css" type="text/css" />
+        <link rel="stylesheet" href="/stylesheets/Teacher.css" type="text/css" />
+        <link rel="stylesheet" href="/stylesheets/bootstrap.min.css" type="text/css" />
+        <meta charset  = "utf-8">
+        <title>Teacher</title>
+    </head>
+    <body style = margin:0px>
+        <!-- 網頁上方的工具列或訊息 -->
+        <header>
+            <div class="navbar navbar-dark bg-dark shadow-sm">
+                <div class="container d-flex justify-content-between">
+                    <a href="#" class="navbar-brand d-flex align-items-center">
+                        <img src="/img/Amoeba.png" class="logo">
+                        <strong>Amoeba</strong>
+                    </a>
+                    <div>
+                        <select class = "menu">
+                            <option  disabled selected hidden style = "text-align: center;">選單</option>
+                            <option style = "text-align: center;">登出</option>
+                            <option style = "text-align: center;">匯出檔案</option>
+                        </select>
+                    </div>
+                    <!-- <i class="fas fa-sign-out-alt" style="color:white"></i> -->
+                </div>
+                
+            </div>
+        </header>
+
+        <!--中間區塊-->
+        <div class = "centerRegion">
+            
+            <div class = "layout"> <!--分成兩半 左半為座位表 右半為問題-->
+                <!--座位表-->
+                <div class = "left">
+                    <div>
+                        <div class = "text">座位表<br></div>
+                        <!-- <div style = "font-size: 1em;">日期：2021/1/9</div> -->
+                        <div style = "font-size: 1em;">日期：<%=date%></div>
+                        <table border='1'class="little" style="margin-top: 3em;">
+                            <tr style="visibility: hidden; margin: auto;">
+                                <th></th>
+                                <th></th>
+                                <th></th>
+                                <th></th>
+                                <th></th>
+                                <th></th>
+                                <th></th>
+                            </tr>
+                            
+                            <% for(let i=0; i<students.length; i++){ 
+                                let stu = students[i];
+                                // At the begging of tr
+                                if(i%7==0){ %>
+                                    <tr>
+                                <% } %>
+                                <% if(stu['Temp']>38){ %>
+                                    <td class="notice">
+                                <% }else{ %>
+                                    <td>
+                                <% } %>
+                                        <strong><%= stu['StuID']%></strong><br>
+                                        體溫<%= stu['Temp'] %>度<br>
+                                        <span style = "color: #707070;"><%= stu['Time']%></span>
+                                    </td>
+                                <% if(i%7==6||i==students.length-1){ //At the end of tr %>
+                                    </tr>
+                                <% } %>
+                            <% } %>
+                          </table>
+                    </div>
+                </div>
+
+                <div class = "right">
+                    <div class="container">
+                        <div class = "text"style="margin-bottom: 3em;">Question</div>
+                        <% for(let quesIdx = 0; quesIdx <= question.length - 1; quesIdx++){ %>
+                            <div class="card bg-light text-dark" style="width: 100%; height: 5em;margin-bottom: 1em;">
+                                <div class="card-body">
+                                    <%=question[quesIdx]['Content']%>
+                                </div>
+                            </div>
+                        <%}%>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- 網頁下方的工具列或訊息 -->
+        <footer>
+            
+        </footer>
+
+    </body>
+</html>
