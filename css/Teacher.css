@@ -4,6 +4,10 @@ body
     font-family: Microsoft JhengHei;  /*設定成微軟正黑體*/
 }
 
+.logo{
+    width: 50px;
+ }
+
 .centerRegion
 {
     padding: 2em 5em;
@@ -64,3 +68,8 @@ table tr th
 {
     width:5em;
 }
+
+.menu{
+    background-color:  #044753;
+    color: white;
+  }
