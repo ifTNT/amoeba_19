@@ -5,7 +5,7 @@
         <link rel="stylesheet" href="css/Teacher.css" type="text/css" />
         <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css" />
         <meta charset  = "utf-8">
-        <title>Teacher</title>
+        <title>AmoebaPosition</title>
     </head>
     <body style = margin:0px>
         <!-- 網頁上方的工具列或訊息 -->
@@ -16,13 +16,13 @@
                         <img src="asset/Amoeba.png" class="logo">
                         <strong>Amoeba</strong>
                     </a>
-                    <div>
+                    <!-- <div>
                         <select class = "menu">
                             <option  disabled selected hidden style = "text-align: center;">選單</option>
                             <option style = "text-align: center;">登出</option>
                             <option style = "text-align: center;">匯出檔案</option>
                         </select>
-                    </div>
+                    </div> -->
                     <!-- <i class="fas fa-sign-out-alt" style="color:white"></i> -->
                 </div>
                 
@@ -37,7 +37,7 @@
                 <div class = "left">
                     <div>
                         <div class = "text">座位表<br></div>
-                        <div style = "font-size: 1em;">日期：2021/1/9</div>
+                        <!-- <div style = "font-size: 1em;">日期：2021/1/9</div> -->
                         <table border='1'class="little" style="margin-top: 3em;">
                             <tr style="visibility: hidden; margin: auto;">
                                 <th></th>
@@ -70,15 +70,14 @@
                             <tr>
                                 <td><strong>A1075511</strong><br>體溫27度<br><span style = "color: #707070;">16:20</span></td>
                                 <td><strong>A1075511</strong><br>體溫27度<br><span style = "color: #707070;">16:20</span></td>
-                                <td class = "notice"><strong>A1075511</strong><br>體溫30度<br><span style = "color: #707070;">16:20</span></td>
+                                <td><strong>A1075511</strong><br>體溫27度<br><span style = "color: #707070;">16:20</span></td>
                                 <td><strong>A1075511</strong><br>體溫27度<br><span style = "color: #707070;">16:20</span></td>
                                 <td><strong>A1075511</strong><br>體溫27度<br><span style = "color: #707070;">16:20</span></td>
                                 <td><strong>A1075511</strong><br>體溫27度<br><span style = "color: #707070;">16:20</span></td>
                                 <td><strong>A1075511</strong><br>體溫27度<br><span style = "color: #707070;">16:20</span></td>
                             </tr>
-                            
                             <tr>
-                                <td class = "notice"><strong>A1075511</strong><br>體溫29度<br><span style = "color: #707070;">16:20</span></td>
+                                <td><strong>A1075511</strong><br>體溫27度<br><span style = "color: #707070;">16:20</span></td>
                                 <td><strong>A1075511</strong><br>體溫27度<br><span style = "color: #707070;">16:20</span></td>
                                 <td><strong>A1075511</strong><br>體溫27度<br><span style = "color: #707070;">16:20</span></td>
                                 <td><strong>A1075511</strong><br>體溫27度<br><span style = "color: #707070;">16:20</span></td>
@@ -91,14 +90,16 @@
                 </div>
 
                 <div class = "right">
-                    <div class="container">
-                        <div class = "text"style="margin-bottom: 3em;">Question</div>
-                        <div class="card bg-light text-dark" style="width: 32em; height: 5em;margin-bottom: 1em;">
-                            <div class="card-body">老師可以在講一次ppt嗎?</div>
-                        </div>
-                        <div class="card bg-light text-dark" style="width: 32em; height: 5em;margin-bottom: 1em;">
-                            <div class="card-body">再啦中文沒學好喔</div>
-                        </div>
+                    <div class="container" style = "text-align: center;">
+                        <div class = "text" style="margin-bottom: 3em;">課程資訊</div>
+                        <ul style = "text-align: left; ">
+                            <li class="card bg-light text-dark" style = "margin: 2em auto ; padding:0.5em; width: 20em; display: flex;">課程編號：</li>
+                            <li class="card bg-light text-dark" style = "margin: 2em auto; padding:0.5em; width: 20em; display: flex;">課程名稱：</li>
+                            <li class="card bg-light text-dark" style = "margin: 2em auto; padding:0.5em; width: 20em; display: flex;">授課教師：</li>
+                            <li class="card bg-light text-dark" style = "margin: 2em auto; padding:0.5em; width: 20em; display: flex;">日期：</li>
+                            <li class="card bg-light text-dark" style = "margin: 2em auto; padding:0.5em; width: 20em; display: flex;">教室：</li>
+                        </ul>
+
                     </div>
 
                 </div>
