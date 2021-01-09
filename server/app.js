@@ -5,6 +5,16 @@ var cookieParser = require("cookie-parser");
 var logger = require("morgan");
 var stylus = require("stylus");
 
+// For Database
+var sqlite3 = require("sqlite3").verbose();
+const db_name = path.join(__dirname, "data", "amoeba19_test.db");
+const db = new sqlite3.Database(db_name, (err) => {
+  if (err) {
+    return console.error(err.message);
+  }
+  console.log("Successful connection to the database 'amoeba19_text.db.db'");
+});
+
 var indexRouter = require("./routes/index");
 var usersRouter = require("./routes/users");
 

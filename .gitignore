@@ -12,3 +12,6 @@ node_modules
 
 # Local History for Visual Studio Code
 .history/
+
+# Testing sqlite3 database
+amoeba19_test.db
