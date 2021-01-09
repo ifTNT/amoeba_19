@@ -1,9 +1,9 @@
 <!doctype html>
 <html>
     <head>
-        <link rel="stylesheet" href="stylesheets/reset.css" type="text/css" />
-        <link rel="stylesheet" href="stylesheets/Teacher.css" type="text/css" />
-        <link rel="stylesheet" href="stylesheets/bootstrap.min.css" type="text/css" />
+        <link rel="stylesheet" href="/stylesheets/reset.css" type="text/css" />
+        <link rel="stylesheet" href="/stylesheets/Teacher.css" type="text/css" />
+        <link rel="stylesheet" href="/stylesheets/bootstrap.min.css" type="text/css" />
         <meta charset  = "utf-8">
         <title>Teacher</title>
     </head>
@@ -79,7 +79,7 @@
                         <% for(let quesIdx = 0; quesIdx <= question.length - 1; quesIdx++){ %>
                             <div class="card bg-light text-dark" style="width: 100%; height: 5em;margin-bottom: 1em;">
                                 <div class="card-body">
-                                    <%=question[quesIdx]%>
+                                    <%=question[quesIdx]['Content']%>
                                 </div>
                             </div>
                         <%}%>

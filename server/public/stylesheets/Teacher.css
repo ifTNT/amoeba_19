@@ -42,11 +42,10 @@ body {
     width: 60%;
     margin: 1em;
     /* background-color: white; */
-    margin: 0 auto;
+    margin: 0;
     display: flex;
     justify-content: center;
 }
-
 .right {
     width: 45%;
     margin: 0 1em;
