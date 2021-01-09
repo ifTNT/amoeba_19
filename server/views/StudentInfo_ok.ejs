@@ -6,17 +6,17 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
-    <title>StudentTempurature</title>
+    <title>StudentInfo_ok</title>
 
     <!-- Bootstrap core CSS -->
-    <link href="./css/bootstrap.min.css" rel="stylesheet">
+    <link href="/stylesheets/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
         integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
         crossorigin="anonymous" />
-    <link href="./css/StudentHome.css" rel="stylesheet">
-    <link href="./css/loader.css" rel="stylesheet">
+    <link href="/stylesheets/StudentHome.css" rel="stylesheet">
+    <link href="/stylesheets/ok.css" rel="stylesheet">
     <!-- Favicons -->
-    <link rel="icon" href="asset/Amoeba.png">
+    <link rel="icon" href="/img/Amoeba.png">
 </head>
 
 <body>
@@ -24,7 +24,7 @@
         <div class="navbar navbar-dark bg-dark shadow-sm">
             <div class="container d-flex justify-content-between" style="padding: 0px;">
                 <a href="#" class="navbar-brand d-flex align-items-center">
-                    <img src="asset/Amoeba.png" class="logo">
+                    <img src="/img/Amoeba.png" class="logo">
                     <strong>Amoeba</strong>
                 </a>
                 <i class="fas fa-sign-out-alt" style="color:white"></i>
@@ -35,15 +35,21 @@
         </div>
     </header>
     <main role="main" class="text-center">
-        <h1 class="h3 mb-3 font-weight-normal" style="margin-top: 30px;">掃描體溫</h1>
-        <div class="loader">
-            <h1>_ _</h1>
-        </div>
 
+        <h1 class="h3 mb-3 font-weight-normal" style="margin-top: 30px;">體溫</h1>
+        <div class="loader">
+            <h1>37°C</h1>
+        </div>
         <p style="font-size: 1.3em;">姓名：<span>胡可愛</span></p>
         <p style="font-size: 1.3em;">學號：<span>A1065524</span></p>
+        <div class="d-flex justify-content-center align-items-center">
+            <svg class="checkmark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52">
+                <circle class="checkmark__circle" cx="26" cy="26" r="25" fill="none"/>
+                <path class="checkmark__check" fill="none" d="M14.1 27.2l7.1 7.2 16.7-16.8"/>
+            </svg>
+            <p class ="signed">已簽到</p>
+        </div>
     </main>
-
 </body>
 
 </html>

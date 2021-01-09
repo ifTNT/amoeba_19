@@ -9,14 +9,14 @@
     <title>StudentTempurature</title>
 
     <!-- Bootstrap core CSS -->
-    <link href="./css/bootstrap.min.css" rel="stylesheet">
+    <link href="/stylesheets/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
         integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
         crossorigin="anonymous" />
-    <link href="./css/StudentHome.css" rel="stylesheet">
+    <link href="/stylesheets/StudentHome.css" rel="stylesheet">
 
     <!-- Favicons -->
-    <link rel="icon" href="asset/Amoeba.png">
+    <link rel="icon" href="/img/Amoeba.png">
 
     <style>
         .sendbox {
@@ -56,7 +56,7 @@
         <div class="navbar navbar-dark bg-dark shadow-sm">
             <div class="container d-flex justify-content-between" style="padding: 0px;">
                 <a href="#" class="navbar-brand d-flex align-items-center">
-                    <img src="asset/Amoeba.png" class="logo">
+                    <img src="/img/Amoeba.png" class="logo">
                     <strong>Amoeba</strong>
                 </a>
                 <i class="fas fa-sign-out-alt" style="color:white"></i>
@@ -69,17 +69,16 @@
     </header>
     <main role="main" class="text-center">
         <div class="card justify-content-center align-items-center" style="margin: 5px 10px; height: 2em; ">
-            <p style="margin-bottom: 0;">教材</p>
+            <p style="margin-bottom: 0;"><%= slides[0] %></p>
         </div>
         <div class="card justify-content-center align-items-center" style="margin: 5px 10px; height: 2em; ">
-            <p style="margin-bottom: 0;">教材</p>
+            <p style="margin-bottom: 0;"><%= slides[1] %></p>
         </div>
-        <div class="card justify-content-center align-items-center" style="margin: 5px 10px; height: 2em; ">
-            <p style="margin-bottom: 0;">窩有一個問題</p>
-        </div>
-        <div class="card justify-content-center align-items-center" style="margin: 5px 10px; height: 2em; ">
-            <p style="margin-bottom: 0;">睡覺484很舒服</p>
-        </div>
+        <% questions.forEach((ques)=>{ %>
+            <div class="card justify-content-center align-items-center" style="margin: 5px 10px; height: 2em; ">
+                <p style="margin-bottom: 0;"><%= ques['Content'] %></p>
+            </div>
+        <% }) %>
     </main>
     <div class="sendbox">
         <input type="text"/>

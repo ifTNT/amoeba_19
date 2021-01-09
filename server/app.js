@@ -5,18 +5,9 @@ var cookieParser = require("cookie-parser");
 var logger = require("morgan");
 var stylus = require("stylus");
 
-// For Database
-var sqlite3 = require("sqlite3").verbose();
-const db_name = path.join(__dirname, "data", "amoeba19_test.db");
-const db = new sqlite3.Database(db_name, (err) => {
-  if (err) {
-    return console.error(err.message);
-  }
-  console.log("Successful connection to the database 'amoeba19_text.db.db'");
-});
-
 var indexRouter = require("./routes/index");
 var usersRouter = require("./routes/users");
+var studentRouter = require("./routes/student");
 
 var app = express();
 
@@ -34,6 +25,7 @@ app.use(express.static(path.join(__dirname, "public")));
 // Routers
 app.use("/", indexRouter);
 app.use("/users", usersRouter);
+app.use("/student", studentRouter);
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {
