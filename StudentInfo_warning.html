@@ -6,7 +6,7 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
-    <title>StudentTempurature</title>
+    <title>StudentInfo_warning</title>
 
     <!-- Bootstrap core CSS -->
     <link href="./css/bootstrap.min.css" rel="stylesheet">
@@ -14,7 +14,7 @@
         integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
         crossorigin="anonymous" />
     <link href="./css/StudentHome.css" rel="stylesheet">
-    <link href="./css/loader.css" rel="stylesheet">
+    <link href="./css/warning.css" rel="stylesheet">
     <!-- Favicons -->
     <link rel="icon" href="asset/Amoeba.png">
 </head>
@@ -35,15 +35,18 @@
         </div>
     </header>
     <main role="main" class="text-center">
-        <h1 class="h3 mb-3 font-weight-normal" style="margin-top: 30px;">掃描體溫</h1>
-        <div class="loader">
-            <h1>_ _</h1>
-        </div>
 
+        <h1 class="h3 mb-3 font-weight-normal" style="margin-top: 30px;">體溫</h1>
+        <div class="loader">
+            <h1>38°C</h1>
+        </div>
         <p style="font-size: 1.3em;">姓名：<span>胡可愛</span></p>
         <p style="font-size: 1.3em;">學號：<span>A1065524</span></p>
+        <div class="d-flex justify-content-center align-items-center flash">
+            <img src="asset/warning.png" style="width:2em;"/>
+            <p class ="signed">請再量一次</p>
+        </div>
     </main>
-
 </body>
 
 </html>
