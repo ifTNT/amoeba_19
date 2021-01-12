@@ -19,3 +19,6 @@ amoeba19_test.db
 # Compiled css
 server/public/stylesheets/*.css
 !server/public/stylesheets/bootstrap.min.css
+
+# Documents
+server/public/doc

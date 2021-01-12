@@ -56,4 +56,32 @@ app.use(function (err, req, res, next) {
   res.render("error");
 });
 
+// Listen MQTT
+var mqtt = require("mqtt");
+const db = require("./routes/db");
+
+let mqtt_args = {
+  username: "DKS75FFBRE2KA1BKHZ",
+  password: "DKS75FFBRE2KA1BKHZ",
+};
+let client = mqtt.connect("mqtt://iot.cht.com.tw", mqtt_args);
+
+var topic = "/v1/device/25622793175/sensor/temp/rawdata";
+
+client.on("connect", function () {
+  console.log("MQTT connected!");
+  client.subscribe(topic);
+});
+
+client.on("message", function (topic, message) {
+  let msg = JSON.parse(message);
+  // JUst for demo
+  db.run("INSERT INTO `Measures` VALUES (?, ?, ?, ?, ?)", [
+    +Date.now(),
+    "A1065524",
+    msg.value[0],
+    5,
+    +Date.now(),
+  ]);
+});
 module.exports = app;

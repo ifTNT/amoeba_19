@@ -4,7 +4,7 @@ var state = 0;
 // 2: Excceed twice
 // 3: ok
 
-const temp_threshold = 37.5;
+const temp_threshold = 38;
 
 function updateTemp(temp) {
   // Update the state
@@ -39,7 +39,7 @@ function updateTemp(temp) {
       document.querySelector("#ok").style.display = "block";
       window.setTimeout(() => {
         // [TODO] Redirect to next page
-        alert("redirected");
+        window.location.href = "/student/slides";
       }, 2000);
       break;
   }

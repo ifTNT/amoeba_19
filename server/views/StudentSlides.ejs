@@ -1,90 +1,121 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 
-<head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta name="description" content="" />
     <title>StudentTempurature</title>
 
     <!-- Bootstrap core CSS -->
-    <link href="/stylesheets/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
-        integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
-        crossorigin="anonymous" />
-    <link href="/stylesheets/StudentHome.css" rel="stylesheet">
+    <link href="/stylesheets/bootstrap.min.css" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+      integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
+      crossorigin="anonymous"
+    />
+    <link href="/stylesheets/StudentHome.css" rel="stylesheet" />
 
     <!-- Favicons -->
-    <link rel="icon" href="/img/Amoeba.png">
+    <link rel="icon" href="/img/Amoeba.png" />
 
     <style>
-        .sendbox {
-            background-color: #044753;
-            position: fixed;
-            bottom: 0;
-            justify-content: space-between;
-            display: flex;
-            align-content: center;
-            padding: 0.5em 1em;
-            box-sizing: border-box;
-            display: flex;
-            width: 100vw;
-            height: 3em;
+      .sendbox {
+        background-color: #044753;
+        position: fixed;
+        bottom: 0;
+        justify-content: space-between;
+        display: flex;
+        align-content: center;
+        padding: 0.5em 1em;
+        box-sizing: border-box;
+        display: flex;
+        width: 100vw;
+        height: 3em;
+      }
 
-        }
+      .sendbox i {
+        display: flex;
+        align-items: center;
+        font-size: 1.5em;
+        color: #a0e0d5;
+      }
 
-        .sendbox i {
-            display: flex;
-            align-items: center;
-            font-size: 1.5em;
-            color: #a0e0d5;
-        }
-
-        .sendbox input {
-            width: 80vw;
-            border-radius: 20px;
-            border: solid #044753 1px;
-            padding: 0 0.5em;
-            box-sizing: border-box;
-        }
+      .sendbox input {
+        width: 80vw;
+        border-radius: 20px;
+        border: solid #044753 1px;
+        padding: 0 0.5em;
+        box-sizing: border-box;
+      }
     </style>
-</head>
+  </head>
 
-<body>
+  <body>
     <header>
-        <div class="navbar navbar-dark bg-dark shadow-sm">
-            <div class="container d-flex justify-content-between" style="padding: 0px;">
-                <a href="#" class="navbar-brand d-flex align-items-center">
-                    <img src="/img/Amoeba.png" class="logo">
-                    <strong>Amoeba</strong>
-                </a>
-                <a href = "/student/logout"><i class="fas fa-sign-out-alt" style="color:white"></i></a>
-            </div>
+      <div class="navbar navbar-dark bg-dark shadow-sm">
+        <div
+          class="container d-flex justify-content-between"
+          style="padding: 0px"
+        >
+          <a href="#" class="navbar-brand d-flex align-items-center">
+            <img src="/img/Amoeba.png" class="logo" />
+            <strong>Amoeba</strong>
+          </a>
+          <a href="/student/logout"
+            ><i class="fas fa-sign-out-alt" style="color: white"></i
+          ></a>
         </div>
-        <div class="container d-flex justify-content-center text-center h5 align-items-center"
-            style="background-color: #F7F7F7; height: 40px;">
-            <strong style="color: #D4D4D4;" class="text-center">嵌入式系統</strong>
-        </div>
+      </div>
+      <div
+        class="container d-flex justify-content-center text-center h5 align-items-center"
+        style="background-color: #f7f7f7; height: 40px"
+      >
+        <strong style="color: #d4d4d4" class="text-center">嵌入式系統</strong>
+      </div>
     </header>
     <main role="main" class="text-center">
-        <div class="card justify-content-center align-items-center" style="margin: 5px 10px; height: 2em; ">
-            <p style="margin-bottom: 0;"><%= slides[0] %></p>
-        </div>
-        <div class="card justify-content-center align-items-center" style="margin: 5px 10px; height: 2em; ">
-            <p style="margin-bottom: 0;"><%= slides[1] %></p>
-        </div>
-        <% questions.forEach((ques)=>{ %>
-            <div class="card justify-content-center align-items-center" style="margin: 5px 10px; height: 2em; ">
-                <p style="margin-bottom: 0;"><%= ques['Content'] %></p>
-            </div>
-        <% }) %>
+      <div
+        class="card justify-content-center align-items-center"
+        style="margin: 5px 10px; height: 2em"
+      >
+        <a href="/doc/slide1.pdf"
+          ><p style="margin-bottom: 0; color: #044753"><%= slides[0] %></p></a
+        >
+      </div>
+      <div
+        class="card justify-content-center align-items-center"
+        style="margin: 5px 10px; height: 2em"
+      >
+        <a href="/doc/slide2.pdf"
+          ><p style="margin-bottom: 0; color: #044753"><%= slides[1] %></p></a
+        >
+      </div>
+      <% questions.forEach((ques)=>{ %>
+      <div
+        class="card justify-content-center align-items-center"
+        style="margin: 5px 10px; height: 2em"
+      >
+        <p style="margin-bottom: 0"><%= ques['Content'] %></p>
+      </div>
+      <% }) %>
     </main>
-    <div class="sendbox">
-        <input type="text"/>
+    <form id="comment" action="/student/slides" method="post">
+      <div class="sendbox">
+        <input name="content" type="text" />
         <i class="fas fa-paper-plane"></i>
-    </div>
-</body>
-
-
+      </div>
+    </form>
+    <script>
+      document
+        .querySelector(".sendbox i")
+        .addEventListener("click", function (e) {
+          document.querySelector("#comment").submit();
+        });
+    </script>
+  </body>
 </html>
