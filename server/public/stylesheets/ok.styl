@@ -1,11 +1,12 @@
-.loader,
-.loader:after {
+#ok {
+  .loader,
+  .loader:after {
     border-radius: 50%;
     width: 10em;
     height: 10em;
-}
+  }
 
-.loader {
+  .loader {
     margin: 60px auto;
     font-size: 20px;
     position: relative;
@@ -21,46 +22,17 @@
     display: flex;
     justify-content: center;
     align-items: center;
-}
+  }
 
-.loader h1 {
+  .loader h1 {
     -webkit-animation: load_h1 1.8s infinite linear;
     animation: load_h1 1.8s infinite linear;
     /* animation: ; */
     margin: 0;
-    color: #7DE796;
-}
+    color: #7de796;
+  }
 
-@-webkit-keyframes load {
-    0% {
-        -webkit-transform: rotate(0deg);
-        transform: rotate(0deg);
-    }
-
-    100% {
-        -webkit-transform: rotate(360deg);
-        transform: rotate(360deg);
-    }
-}
-
-@-webkit-keyframes load_h1 {
-    0% {
-        -webkit-transform: rotate(360deg);
-        transform: rotate(360deg);
-        /* opacity: 1; */
-    }
-
-    /* 50% {
-        opacity: 0;
-    }*/
-    100% {
-        -webkit-transform: rotate(0deg);
-        transform: rotate(0deg);
-        /* opacity: 1; */
-    }
-}
-
-.checkmark__circle {
+  .checkmark__circle {
     stroke-dasharray: 166;
     stroke-dashoffset: 166;
     stroke-width: 2;
@@ -68,9 +40,9 @@
     stroke: #7ac142;
     fill: none;
     animation: stroke 0.6s cubic-bezier(0.65, 0, 0.45, 1) forwards;
-}
+  }
 
-.checkmark {
+  .checkmark {
     width: 46px;
     height: 46px;
     border-radius: 50%;
@@ -80,51 +52,52 @@
     stroke-miterlimit: 10;
     margin: 0;
     box-shadow: inset 0px 0px 0px #7ac142;
-    animation: fill .4s ease-in-out .4s forwards, scale .3s ease-in-out .9s both;
-}
+    animation: fill 0.4s ease-in-out 0.4s forwards,
+      scale 0.3s ease-in-out 0.9s both;
+  }
 
-.checkmark__check {
+  .checkmark__check {
     transform-origin: 50% 50%;
     stroke-dasharray: 48;
     stroke-dashoffset: 48;
     animation: stroke 0.3s cubic-bezier(0.65, 0, 0.45, 1) 0.8s forwards;
-}
+  }
 
-@keyframes stroke {
-    100% {
-        stroke-dashoffset: 0;
-    }
-}
-
-@keyframes scale {
-
-    0%,
-    100% {
-        transform: none;
-    }
-
-    50% {
-        transform: scale3d(1.1, 1.1, 1);
-    }
-}
-
-@keyframes fill {
-    100% {
-        box-shadow: inset 0px 0px 0px 30px #7ac142;
-    }
-}
-
-.signed {
+  .signed {
     display: inline-block;
     font-size: 1.3em;
     margin: 0 0 0 1em;
     color: #7ac142;
-    animation: signed 0.3s ease-in 1.0s forwards;
+    animation: signed 0.3s ease-in 1s forwards;
     opacity: 0;
+  }
+}
+
+@keyframes stroke {
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes scale {
+  0%,
+  100% {
+    transform: none;
+  }
+
+  50% {
+    transform: scale3d(1.1, 1.1, 1);
+  }
+}
+
+@keyframes fill {
+  100% {
+    box-shadow: inset 0px 0px 0px 30px #7ac142;
+  }
 }
 
 @keyframes signed {
-    100% {
-        opacity: 1;
-    }
+  100% {
+    opacity: 1;
+  }
 }

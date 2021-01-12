@@ -1,11 +1,12 @@
-.loader,
-.loader:after {
+#danger {
+  .loader,
+  .loader:after {
     border-radius: 50%;
     width: 10em;
     height: 10em;
-}
+  }
 
-.loader {
+  .loader {
     margin: 60px auto;
     font-size: 20px;
     position: relative;
@@ -21,60 +22,32 @@
     display: flex;
     justify-content: center;
     align-items: center;
-}
+  }
 
-.loader h1 {
+  .loader h1 {
     -webkit-animation: load_h1 1.8s infinite linear;
     animation: load_h1 1.8s infinite linear;
     /* animation: ; */
     margin: 0;
-    color: #D61414;
-}
+    color: #d61414;
+  }
 
-@-webkit-keyframes load {
-    0% {
-        -webkit-transform: rotate(0deg);
-        transform: rotate(0deg);
-    }
-
-    100% {
-        -webkit-transform: rotate(360deg);
-        transform: rotate(360deg);
-    }
-}
-
-@-webkit-keyframes load_h1 {
-    0% {
-        -webkit-transform: rotate(360deg);
-        transform: rotate(360deg);
-        /* opacity: 1; */
-    }
-
-    /* 50% {
-        opacity: 0;
-    }*/
-    100% {
-        -webkit-transform: rotate(0deg);
-        transform: rotate(0deg);
-        /* opacity: 1; */
-    }
-}
-
-.signed {
+  .signed {
     display: inline-block;
     font-size: 1.3em;
     margin: 0 0 0 1em;
-    color: #D61414;
-}
-.flash{
+    color: #d61414;
+  }
+  .flash {
     animation: flash 0.8s ease-in-out 0s infinite alternate;
+  }
 }
 
 @keyframes flash {
-    0%{
-        opacity: 1;
-    }
-    100% {
-        opacity: 0;
-    }
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
 }
