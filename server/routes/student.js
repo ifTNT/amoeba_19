@@ -40,71 +40,20 @@ router.get("/slides", function (req, res, next) {
   });
 });
 
-router.get("/temp", function (req, res, next) {
+router.get("/measure", function (req, res, next) {
+  //let user = req.session["user"];
+  //db.get(
+  //  "SELECT `Name` FROM `Accounts` WHERE `StuID` = ?",
+  //  [user],
+  //  (error, rows) => {
   res.render("StudentInfo", {
-    name: "Test",
-    studentid: "A1100000",
-    temperature: 38,
+    name: "test",
+    studentid: "A10000000",
+    //name: rows["Name"],
+    //studentid: user,
   });
-});
-
-router.get("/temperature", function (req, res, next) {
-  let user = req.session["user"];
-  db.get(
-    "SELECT `Name` FROM `Accounts` WHERE `StuID` = ?",
-    [user],
-    (error, rows) => {
-      res.render("StudentTemp", {
-        name: rows["Name"],
-        studentid: user,
-      });
-    }
-  );
-});
-router.get("/tempok", function (req, res, next) {
-  let user = req.session["user"];
-  let tempok = "37.5";
-  db.get(
-    "SELECT `Name` FROM `Accounts` WHERE `StuID` = ?",
-    [user],
-    (error, name) => {
-      res.render("StudentInfo_ok", {
-        name: name["Name"],
-        studentid: user,
-        temperature: tempok,
-      });
-    }
-  );
-});
-router.get("/tempwarning", function (req, res, next) {
-  let user = req.session["user"];
-  let tempwarning = "38.2";
-  db.get(
-    "SELECT `Name` FROM `Accounts` WHERE `StuID` = ?",
-    [user],
-    (error, name) => {
-      res.render("StudentInfo_warning", {
-        name: name["Name"],
-        studentid: user,
-        temperature: tempwarning,
-      });
-    }
-  );
-});
-router.get("/tempdanger", function (req, res, next) {
-  let user = req.session["user"];
-  let tempdanger = "38.3";
-  db.get(
-    "SELECT `Name` FROM `Accounts` WHERE `StuID` = ?",
-    [user],
-    (error, name) => {
-      res.render("StudentInfo_danger", {
-        name: name["Name"],
-        studentid: user,
-        temperature: tempdanger,
-      });
-    }
-  );
+  //  }
+  //);
 });
 
 router.get("/logout", function (req, res, next) {

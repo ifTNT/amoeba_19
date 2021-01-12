@@ -6,6 +6,7 @@ var logger = require("morgan");
 var stylus = require("stylus");
 var bodyParser = require("body-parser");
 var session = require("express-session");
+var cors = require("cors");
 
 var indexRouter = require("./routes/index");
 var studentRouter = require("./routes/student");
@@ -19,6 +20,7 @@ app.set("views", path.join(__dirname, "views"));
 app.set("view engine", "ejs");
 
 app.use(logger("dev"));
+app.use(cors());
 app.use(
   session({
     secret: "This is a secret",
